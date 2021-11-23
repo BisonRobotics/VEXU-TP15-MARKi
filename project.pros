@@ -1,7 +1,7 @@
 {
     "py/object": "pros.conductor.project.Project",
     "py/state": {
-        "project_name": "NDSU-CU-15Worlds",
+        "project_name": "VEXU-TP-MARKi",
         "target": "v5",
         "templates": {
             "kernel": {

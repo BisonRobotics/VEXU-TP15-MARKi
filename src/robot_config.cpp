@@ -4,19 +4,27 @@ using namespace pros;
 
 Controller joystick(E_CONTROLLER_MASTER);
 
-Motor blDrive(1, true);
-Motor mlDrive(2, true);
-Motor flDrive(3, true);
-Motor brDrive(4);
-Motor mrDrive(5);
-Motor frDrive(6);
+Motor dRB(1, true);
+Motor dRF(2, true);
+Motor dLB(3);
+Motor dLF(4);
+Motor driveRight[]{dRB,dRF};
+Motor driveLeft[]{dLB,dLF};
 
-Motor leftDrive[]{blDrive, mlDrive, flDrive};
-Motor rightDrive[]{brDrive, mrDrive, frDrive};
-// 
-// ADIEncoder leftSensor ('A', 'B', true);
-// ADIEncoder rightSensor ('C', 'D', false);
+Motor armLeft(5);
+Motor armRight(6, true);
+
+Motor tiltLeft(7);
+Motor tiltRight(8, true);
+
+Motor claw(9);
+
+ADIEncoder leftSensor ('A', 'B', true);
+ADIEncoder rightSensor ('C', 'D', false);
 
 
-//Motor $motorName(PORT_NUMBER, isReversed?);
-//Motor $motorGroupName[]{$motorName1, $motorName2};
+
+void tankDrive(int left, int right){
+  for(int x=0;x<2;x++){driveLeft[x] = left;}
+  for(int x=0;x<2;x++){driveRight[x] = right;}
+}

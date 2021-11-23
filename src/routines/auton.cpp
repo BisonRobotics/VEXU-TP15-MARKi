@@ -1,7 +1,7 @@
 #include "robot_config.h"
 using namespace okapi;
 
-std::shared_ptr<ChassisController> drive =
+std::shared_ptr<OdomChassisController> chassis =
 ChassisControllerBuilder()
     .withMotors({-1,-2,-3},{4,5,6})
     // green gearset, 4 inch wheel diameter, 12.2 inch wheel track
@@ -19,5 +19,6 @@ ChassisControllerBuilder()
     .buildOdometry();
 
 void auton_comp(){
+  chassis->setState({0_in, 0_in, 0_deg});
 
 }

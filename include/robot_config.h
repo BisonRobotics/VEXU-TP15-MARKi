@@ -1,14 +1,21 @@
 #include "api.h"
-#include "main.h"
+
 using namespace pros;
 
 extern Controller joystick;
 
-//extern Motor $motorName;
-//extern Motor $motorGroupName;
+extern Motor driveRight;
+extern Motor driveLeft;
 
-extern Motor leftDrive;
-extern Motor rightDrive;
+extern Motor armLeft;
+extern Motor armRight;
 
-// extern ADIEncoder leftSensor;
-// extern ADIEncoder rightSensor;
+extern Motor tiltLeft;
+extern Motor tiltRight;
+
+extern Motor claw;
+
+extern ADIEncoder leftSensor;
+extern ADIEncoder rightSensor;
+
+extern void tankDrive(int, int);
