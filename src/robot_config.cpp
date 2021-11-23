@@ -22,7 +22,8 @@ Motor claw(9);
 ADIEncoder leftSensor ('A', 'B', true);
 ADIEncoder rightSensor ('C', 'D', false);
 
-
+ADIDigitalOut leftWing ('E');
+ADIDigitalOut rightWing ('F');
 
 void tankDrive(int left, int right){
   for(int x=0;x<2;x++){driveLeft[x] = left;}

@@ -18,4 +18,7 @@ extern Motor claw;
 extern ADIEncoder leftSensor;
 extern ADIEncoder rightSensor;
 
+extern ADIDigitalOut leftWing;
+extern ADIDigitalOut rightWing;
+
 extern void tankDrive(int, int);
