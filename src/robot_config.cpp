@@ -4,20 +4,22 @@ using namespace pros;
 
 Controller joystick(E_CONTROLLER_MASTER);
 
-Motor dRB(1, true);
-Motor dRF(2, true);
-Motor dLB(3);
-Motor dLF(4);
-Motor driveRight[]{dRB,dRF};
-Motor driveLeft[]{dLB,dLF};
+Motor dRB(4, true);
+Motor dRM(12, true);
+Motor dRF(6, true);
+Motor dLB(5);
+Motor dLM(13);
+Motor dLF(7);
+Motor driveRight[]{dRB,dRM,dRF};
+Motor driveLeft[]{dLB,dLM,dLF};
 
-Motor armLeft(5);
-Motor armRight(6, true);
+Motor armLeft(9);
+Motor armRight(8, true);
 
-Motor tiltLeft(7);
-Motor tiltRight(8, true);
+Motor tiltLeft(3);
+Motor tiltRight(2, true);
 
-Motor claw(9);
+Motor claw(10);
 
 ADIEncoder leftSensor ('A', 'B', true);
 ADIEncoder rightSensor ('C', 'D', false);
