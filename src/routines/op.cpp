@@ -49,10 +49,10 @@ void op_comp(){
       claw = 0;
     }
 
-    if(joystick.get_digital(E_CONTROLLER_DIGITAL_X)){
+    if(joystick.get_digital_new_press(E_CONTROLLER_DIGITAL_X)){
       leftWing.set_value(true);
       rightWing.set_value(true);
-    }else if(joystick.get_digital(E_CONTROLLER_DIGITAL_B)){
+    }else if(joystick.get_digital_new_press(E_CONTROLLER_DIGITAL_B)){
       leftWing.set_value(false);
       rightWing.set_value(false);
     }
@@ -62,7 +62,7 @@ void op_comp(){
     }else if(joystick.get_digital(E_CONTROLLER_DIGITAL_A)){
       drive_reverse = false;
     }
-    
+
     delay(2);
   }
 }
