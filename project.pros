@@ -1,7 +1,7 @@
 {
     "py/object": "pros.conductor.project.Project",
     "py/state": {
-        "project_name": "VEXU-TP-MARKi",
+        "project_name": "VEXU-TP15-MARKi",
         "target": "v5",
         "templates": {
             "kernel": {

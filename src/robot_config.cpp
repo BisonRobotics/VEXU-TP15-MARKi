@@ -28,6 +28,6 @@ ADIDigitalOut leftWing ('E');
 ADIDigitalOut rightWing ('F');
 
 void tankDrive(int left, int right){
-  for(int x=0;x<2;x++){driveLeft[x] = left;}
-  for(int x=0;x<2;x++){driveRight[x] = right;}
+  for(int x=0;x<3;x++){driveLeft[x] = left;}
+  for(int x=0;x<3;x++){driveRight[x] = right;}
 }
